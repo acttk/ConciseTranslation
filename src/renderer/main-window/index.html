@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Screenshot Translator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Screenshot Translator</h1>
+
+    <div class="section">
+      <label class="section-title">Translation Service</label>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="service" value="deepl" checked>
+          <span>DeepL (Free API)</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="service" value="baidu">
+          <span>Baidu Translate</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="section" id="deepl-section">
+      <label for="deepLKey">DeepL API Key</label>
+      <div class="input-row">
+        <input type="password" id="deepLKey" placeholder="Enter your DeepL API key">
+        <button id="toggleDeepL" type="button" class="icon-btn" title="Show/Hide">👁</button>
+      </div>
+      <button id="testDeepL" class="btn-secondary">Test Connection</button>
+      <span id="deepLStatus" class="status"></span>
+    </div>
+
+    <div class="section hidden" id="baidu-section">
+      <label for="baiduAppId">Baidu App ID</label>
+      <input type="text" id="baiduAppId" placeholder="Enter Baidu App ID">
+      <label for="baiduSecretKey">Baidu Secret Key</label>
+      <input type="password" id="baiduSecretKey" placeholder="Enter Baidu Secret Key">
+      <button id="testBaidu" class="btn-secondary">Test Connection</button>
+      <span id="baiduStatus" class="status"></span>
+    </div>
+
+    <div class="section">
+      <label class="shortcut-hint">Press F1 to take a screenshot and translate</label>
+    </div>
+
+    <div class="actions">
+      <button id="saveBtn" class="btn-primary">Save Settings</button>
+      <button id="minimizeBtn" class="btn-secondary">Minimize to Tray</button>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

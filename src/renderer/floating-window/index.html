@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Translation</title>
+</head>
+<body>
+  <div class="header">
+    <span class="title">Translation</span>
+    <div class="header-actions">
+      <button id="copyBtn" title="Copy translation">📋</button>
+      <button id="closeBtn" title="Close">✕</button>
+    </div>
+  </div>
+  <div id="content">
+    <div id="loading">Recognizing text...</div>
+    <div id="results" class="hidden"></div>
+    <div id="error" class="hidden"></div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
