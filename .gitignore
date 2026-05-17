@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+*.log
+config.json
+__pycache__/
+*.pyc
+*.egg-info/
+.claude/
+src/
+electron-builder.yml
+package.json
+package-lock.json
+test.js
+test_*.py
